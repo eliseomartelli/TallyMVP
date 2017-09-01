@@ -8,7 +8,7 @@ The Only external library, beside the support ones is [ButterKnife](jakewharton.
 Every part of the app of the app is isolated, so it's easily testable/maintainable.
 
 ### Screenshot
-![](resources/screenshot.png)
+<img src="resources/screenshot.png" height="400px"></img>
 
 ### How it works (Developer Side)
 The user opens the app and then is presented with the ```TallyActivity``` that's
