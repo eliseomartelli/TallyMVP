@@ -4,25 +4,25 @@ package it.eliseomartelli.tallymvp;
  * Created by Eliseo Martelli on 01-Sep-17.
  */
 
-public class Model implements MainModel {
-    int score;
+public class TallyModel implements ITallyModel {
+    private int score;
     @Override
-    public int getScore() {
+    public int getCount() {
         return score;
     }
 
     @Override
-    public void addScore() {
+    public void increaseCount() {
         score += 1;
     }
 
     @Override
-    public void removeScore() {
+    public void decreaseCount() {
         score -= 1;
     }
 
     @Override
-    public void reset() {
+    public void resetCount() {
         score = 0;
     }
 }

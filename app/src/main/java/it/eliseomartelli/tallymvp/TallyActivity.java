@@ -10,12 +10,12 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import butterknife.Unbinder;
 
-public class MainActivity extends AppCompatActivity implements MainView{
+public class TallyActivity extends AppCompatActivity implements ITallyView {
 
     @BindView(R.id.tv)
     TextView mTextView;
 
-    private MainPresenter presenter;
+    private TallyPresenter presenter;
     private Unbinder unbinder;
 
     @Override
@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity implements MainView{
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
 
-        Model model = new Model();
-        presenter = new MainPresenter(this, model);
+        TallyModel model = new TallyModel();
+        presenter = new TallyPresenter(this, model);
 
-        presenter.showScore();
+        presenter.showCount();
     }
 
     @Override
@@ -37,20 +37,20 @@ public class MainActivity extends AppCompatActivity implements MainView{
 
     @OnClick(R.id.button2)
     @Override
-    public void addPressed() {
-        presenter.addScore();
+    public void onIncreaseCountTriggered() {
+        presenter.increaseCount();
     }
 
     @OnClick(R.id.button)
     @Override
-    public void removePressed() {
-        presenter.removeScore();
+    public void onDecreaseCountTriggered() {
+        presenter.decreaseCount();
     }
 
     @OnLongClick(R.id.tv)
     @Override
-    public boolean resetTriggered() {
-        presenter.reset();
+    public boolean onResetCountTriggered() {
+        presenter.resetCount();
         return true;
     }
 
