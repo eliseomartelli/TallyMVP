@@ -3,7 +3,7 @@ A simple project I made to explain the MVP pattern to a friend
 
 ### Technologies/Patterns/Libraries
 The pattern used for this project is MVP (Model, View, Presenter).
-The Only external library, beside the support ones is [ButterKnife](jakewharton.github.io/butterknife/),
+The Only external library, beside the support ones is [ButterKnife](http://jakewharton.github.io/butterknife/),
 
 Every part of the app of the app is isolated, so it's easily testable/maintainable.
 
